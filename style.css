@@ -276,10 +276,11 @@ body {
       justify-content: center;
       z-index: 10;
       margin: -1.6rem;
+      object-fit: cover;
+      object-position: center;
     }
 
     .project-img{
-
       width: 300%;
       filter:saturate(10%) opacity(10%);
     }
