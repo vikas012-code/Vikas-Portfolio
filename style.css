@@ -22,6 +22,7 @@ body {
       background-image: linear-gradient(0deg, transparent 24%, rgba(255,255,255,0.03) 25%, rgba(255,255,255,0.03) 26%, transparent 27%, transparent 74%, rgba(255,255,255,0.03) 75%, rgba(255,255,255,0.03) 76%, transparent 77%, transparent),
                         linear-gradient(90deg, transparent 24%, rgba(255,255,255,0.03) 25%, rgba(255,255,255,0.03) 26%, transparent 27%, transparent 74%, rgba(255,255,255,0.03) 75%, rgba(255,255,255,0.03) 76%, transparent 77%, transparent);
       background-size: 40px 40px;
+      overflow-x: hidden;
     }
 
     .main{
@@ -90,8 +91,8 @@ body {
       animation: move 10s linear infinite;
     }
     .main i#four svg{
-      width: fit-content;
-      height: fit-content;
+      width: 10rem;
+      height: 10rem;
     } 
     .main i#four svg path{
       scale: 7;
@@ -281,7 +282,9 @@ body {
     }
 
     .project-img{
-      filter:saturate(10%) opacity(10%);
+      width: 100%;
+      object-fit: cover;
+      filter:saturate(50%) opacity(6%);
     }
 
     .card h2,.icon,.desc,.features,.tech,.buttons{
@@ -318,6 +321,7 @@ body {
 
     .features li {
       margin: 6px 0;
+      list-style: none;
     }
 
     .features li::before {
@@ -328,7 +332,7 @@ body {
       margin-right: 8px;
     }
 
-    .tech span {
+    .tech span{
       display: inline-block;
       margin-right: 12px;
       color: #ccc;
@@ -374,6 +378,11 @@ body {
     }
 
     @media screen and (max-width: 768px) {
+      .skill{
+        width: 8rem;
+        height: 3.5rem;
+        gap: 6px;
+      }
       .main{
         height: max-content;
       }
@@ -422,6 +431,29 @@ body {
       .main h2{
         font-size: 1rem;
       }
+
+      .skill{
+        width: 5rem;
+        height: 3rem;
+        gap: 6px;
+      }
+      svg{
+      width: 2rem;
+      height: 2rem;
+    }
+    svg path{
+      scale: 1.18;
+    }
+      .skill i{
+      font-size: 1.5rem;
+    }
+      .skill span {
+      font-size: 0.8rem;
+    }
+
+    .skill span p{
+      font-size: 0.6rem;
+    }
       .card{
         width: 70vw;
       }
