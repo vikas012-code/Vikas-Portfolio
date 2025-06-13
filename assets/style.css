@@ -1,0 +1,422 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+/* @keyframes move {
+  0% {
+   }
+  30% {
+  transform: translate(4rem, 4rem); }
+  70%{
+  transform: translate(-4rem, 8rem);  
+}
+100%{
+  transform: translate(0rem, 0rem);
+}
+} */
+body {
+      background-color: #0a0a0a;
+      color: white;
+      font-family: 'Segoe UI', sans-serif;
+      background-image: linear-gradient(0deg, transparent 24%, rgba(255,255,255,0.03) 25%, rgba(255,255,255,0.03) 26%, transparent 27%, transparent 74%, rgba(255,255,255,0.03) 75%, rgba(255,255,255,0.03) 76%, transparent 77%, transparent),
+                        linear-gradient(90deg, transparent 24%, rgba(255,255,255,0.03) 25%, rgba(255,255,255,0.03) 26%, transparent 27%, transparent 74%, rgba(255,255,255,0.03) 75%, rgba(255,255,255,0.03) 76%, transparent 77%, transparent);
+      background-size: 40px 40px;
+    }
+
+    .main{
+      height: 100vh;
+      display: flex;
+      position: relative;
+      justify-content: center;
+      align-items: center;
+    }
+
+    header {
+      text-align: center;
+      padding: 2rem 1rem 1rem;
+    }
+
+    header h1 {
+      font-size: 8rem;
+      margin: 0;
+      color: #ffffff; 
+      width: min-content;
+      text-align: left;
+
+    }
+
+    header h2 {
+      font-size: 2rem;
+      color: #00bcd4;
+      margin-top: 0.5rem;
+      text-align: left;
+
+    }
+
+    .main i{
+      position: absolute;
+      top: 0;
+      color: #00eaff;
+      opacity: 20%;
+      z-index: -1;
+      
+    }
+
+    .main i#one{
+      top: 10vh;
+      left: 80vw;
+      font-size: 10rem;
+      animation: move 10s linear infinite;
+    }
+
+    .main i#two{
+      top: 20vh;
+      left: 10vw;
+      font-size: 10rem;
+      animation: move 10s linear infinite;
+    }
+
+    .main i#three{
+      top:40vh;
+      left:40vw;
+      font-size: 10rem;
+      animation: move 10s linear infinite;
+    }
+
+    .main i#four{
+      top: 70vh;
+      left: 20vw;
+      animation: move 10s linear infinite;
+    }
+    .main i#four svg{
+      width: fit-content;
+      height: fit-content;
+    } 
+    .main i#four svg path{
+      scale: 7;
+    } 
+
+    .profile-div{
+      padding-top: 6rem;
+    }
+
+    .profile div {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      
+    }
+
+    .profile div img{
+        width: 14rem;
+        height: 18rem;
+        object-fit: cover;
+        border-radius: 1rem;
+    }
+
+    .icons {
+      text-align: center;
+    }
+
+    .icons a {
+      margin: 0 10px;
+      font-size: 1.8rem;
+      color: #ccc;
+      transition: color 0.3s;
+    }
+
+    .icons a i{
+      position: relative;
+      color: #ffffffb3;
+      opacity: 100%;
+    }
+
+    .icons a:hover {
+      color: #00eaff;
+    }
+
+    .skills {
+      padding: 3rem 2rem;
+      margin: auto;
+    }
+
+    .skills h3 {
+      text-align: center;
+      font-size: 2rem;
+      color: #00bcd4;
+    }
+
+    .skills p {
+      text-align: center;
+      color: #aaa;
+      margin-bottom: 2rem;
+    }
+
+    .skills-set {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content:center;
+      gap: 1.5rem;
+      padding: 1rem;
+    }
+
+    .skill {
+      border: 1px solid #333;
+      display: flex;
+      justify-content:space-evenly;
+      align-items: center;
+      width: 10rem;
+      height: 4rem;
+      padding: 1rem;
+      text-align: center;
+      border-radius: 10px;
+      background-color: #111;
+      transition: 0.3s ease-in-out;
+    }
+    .skill i{
+      font-size: 2rem;
+    }
+    svg{
+      width: 2rem;
+      height: 2rem;
+    }
+    svg path{
+      scale: 1.4;
+    }
+
+    .skill:hover {
+      border-color: #00eaff;
+      transform: translateY(-5px);
+    }
+    .skill:hover i{
+      color: #00eaff;
+    }
+
+     .skill:hover span{
+      color: #00eaff;
+    }
+    .skill:hover svg path{
+      color: #00eaff;
+    }
+
+
+    .skill span {
+      display: block;
+      font-size: 1.2rem;
+    }
+
+    .skill span p{
+      margin-bottom: 0;
+      font-size: 1rem;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      font-size: 0.9rem;
+      color: #777;
+    }
+
+
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+    }
+
+    h1 span {
+      color: #00eaff;
+    }
+
+    p.subtitle {
+      color: #aaa;
+      margin-bottom: 40px;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .projects {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      justify-content: center;
+    }
+
+    .card {
+      background-color: #0b0b0c;
+      border-radius: 12px;
+      padding: 25px;
+      width: 350px;
+      border: 1px solid #333;
+      position: relative;
+      display: flex;
+      justify-content:space-between;
+      flex-direction: column;
+    }
+
+    .card:hover{
+        border-color: #00eaff;
+    }
+    
+
+    .card h2 {
+      font-size: 1.6rem;
+      margin: 10px 0 5px;
+    }
+
+    .card .icon {
+      font-size: 1.8rem;
+      color: #00eaff;
+    }
+
+    .desc {
+      color: #bbb;
+      font-size: 0.95rem;
+      margin-bottom: 15px;
+    }
+
+    .features,
+    .tech {
+      text-align: left;
+      font-size: 0.95rem;
+      margin-bottom: 15px;
+    }
+
+    .features li {
+      margin: 6px 0;
+    }
+
+    .features li::before {
+      content: "\f00c";
+      font-family: "Font Awesome 6 Free";
+      font-weight: 900;
+      color: #00eaff;
+      margin-right: 8px;
+    }
+
+    .tech span {
+      display: inline-block;
+      margin-right: 12px;
+      color: #ccc;
+    }
+
+    .card .buttons {
+      display: flex;
+      gap: 10px;
+      margin-top: 1rem;
+
+    }
+
+    .card .buttons a {
+      flex: 1;
+      text-decoration: none;
+      padding: 10px 15px;
+      border-radius: 6px;
+      font-weight: 600;
+      font-size: 0.9rem;
+      transition: 0.3s ease;
+    }
+
+    .btn-github {
+      background-color: transparent;
+      color: #ffffff;
+      border: 1px solid white;
+    }
+
+    .btn-github:hover {
+      color:#00eaff;
+      border: 1px solid #00eaff;
+    }
+
+    .btn-demo {
+      background-color: transparent;
+      color: #ffffff;
+      border: 1px solid white;
+    }
+
+    .btn-demo:hover {
+      color:#00eaff;
+      border: 1px solid #00eaff;
+    }
+
+    @media screen and (max-width: 768px) {
+      .main{
+        height: max-content;
+      }
+      .projects {
+        flex-direction: column;
+        align-items: center;
+      }
+      .profile-div{
+        padding-top: 2rem;
+      }
+      .main{
+        flex-direction: column;
+        padding-top: 1rem;
+      }
+      .main h1{
+        font-size: 6rem;
+      }
+
+      .main h2{
+        font-size: 1.5rem;
+      }
+      .main i#one{
+        font-size: 4rem;
+      }
+      .main i#two{
+        font-size: 4rem;
+      }
+      .main i#three{
+        top: 70vh;
+        left: 10vw;
+        font-size: 4rem;
+      }
+      .main i#four{
+        top: 70vh;
+        left: 60vw;
+        scale:0.5;
+      }
+      
+    }
+
+    @media screen and (max-width: 450px) {
+      .main h1{
+        font-size: 4rem;
+      }
+
+      .main h2{
+        font-size: 1rem;
+      }
+      .card{
+        width: 70vw;
+      }
+      .card h2 {
+        font-size: 1rem;
+      }
+      .desc{
+        font-size: 0.7rem;
+      }
+      .features{
+        font-size: 0.7rem;
+      }
+      .tech{
+        font-size: 0.7rem;
+      }
+      .card .buttons a{
+        font-size: 0.7rem;
+        padding: 5px 10px;
+
+      }
+    }
+
