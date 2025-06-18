@@ -1,6 +1,7 @@
 *{
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 /* @keyframes move {
@@ -15,15 +16,27 @@
   transform: translate(0rem, 0rem);
 }
 } */
+
+@keyframes animatedBackground {  
+  100%{
+        background-position: 20% 20%;
+  }
+}
+
 body {
       background-color: #0a0a0a;
       color: white;
       font-family: 'Segoe UI', sans-serif;
       background-image: linear-gradient(0deg, transparent 24%, rgba(255,255,255,0.03) 25%, rgba(255,255,255,0.03) 26%, transparent 27%, transparent 74%, rgba(255,255,255,0.03) 75%, rgba(255,255,255,0.03) 76%, transparent 77%, transparent),
                         linear-gradient(90deg, transparent 24%, rgba(255,255,255,0.03) 25%, rgba(255,255,255,0.03) 26%, transparent 27%, transparent 74%, rgba(255,255,255,0.03) 75%, rgba(255,255,255,0.03) 76%, transparent 77%, transparent);
-      background-size: 40px 40px;
+      background-size: 3rem 3rem;
       overflow-x: hidden;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      animation: animatedBackground 10s linear infinite alternate;    
     }
+    
 
     .main{
       height: 100vh;
@@ -49,7 +62,9 @@ body {
 
     header h2 {
       font-size: 2rem;
-      color: #00bcd4;
+      background-image: linear-gradient(to right,rgb(0, 171, 171), cyan);
+      color: transparent;
+      background-clip: text;
       margin-top: 0.5rem;
       text-align: left;
 
@@ -66,29 +81,29 @@ body {
 
     .main i#one{
       top: 10vh;
-      left: 80vw;
+      left: 60vw;
       font-size: 10rem;
-      animation: move 10s linear infinite;
+      /* animation: move 10s linear infinite; */
     }
 
     .main i#two{
       top: 20vh;
       left: 10vw;
       font-size: 10rem;
-      animation: move 10s linear infinite;
+      /* animation: move 10s linear infinite; */
     }
 
     .main i#three{
       top:40vh;
-      left:40vw;
+      left:-15vw;
       font-size: 10rem;
-      animation: move 10s linear infinite;
+      /* animation: move 10s linear infinite; */
     }
 
     .main i#four{
       top: 70vh;
       left: 20vw;
-      animation: move 10s linear infinite;
+      /* animation: move 10s linear infinite; */
     }
     .main i#four svg{
       width: 10rem;
@@ -99,14 +114,14 @@ body {
     } 
 
     .profile-div{
-      padding-top: 6rem;
+      position: relative;
+      top: 4.5rem;
     }
 
     .profile div {
       display: flex;
       justify-content: center;
-      align-items: center;
-      
+      align-items: center;      
     }
 
     .profile div img{
@@ -138,15 +153,19 @@ body {
       color: #00eaff;
     }
 
+
     .skills {
-      padding: 1rem 2rem;
+      /* padding: 1rem 2rem; */
+      padding: 0rem 1rem;
       margin: auto;
     }
 
     .skills h3 {
       text-align: center;
       font-size: 2rem;
-      color: #00bcd4;
+      background-image: linear-gradient(to right,rgb(0, 188, 188), cyan);
+      color: transparent;
+      background-clip: text;
     }
 
     .skills p {
@@ -159,9 +178,8 @@ body {
       display: flex;
       flex-wrap: wrap;
       align-items: center;
-      justify-content:center;
+      justify-content:space-between;
       gap: 1.5rem;
-      padding: 1rem;
     }
 
     .skill {
@@ -170,7 +188,7 @@ body {
       justify-content:space-evenly;
       align-items: center;
       width: 10rem;
-      height: 4rem;
+      height: 5rem;
       padding: 1rem;
       text-align: center;
       border-radius: 10px;
@@ -211,7 +229,7 @@ body {
 
     .skill span p{
       margin-bottom: 0;
-      font-size: 1rem;
+      font-size: 0.8rem;
     }
 
     footer {
@@ -221,10 +239,12 @@ body {
       color: #777;
     }
 
+    section{
+      width: 70vw;
+    }
 
 
     .container {
-      max-width: 1100px;
       margin: 0 auto;
       padding: 60px 20px;
       text-align: center;
@@ -236,7 +256,9 @@ body {
     }
 
     h1 span {
-      color: #00eaff;
+      background-image: linear-gradient(to right,rgb(0, 188, 188), cyan);
+      color: transparent;
+      background-clip: text;
     }
 
     p.subtitle {
@@ -251,15 +273,15 @@ body {
       display: flex;
       flex-wrap: wrap;
       gap: 30px;
-      justify-content: center;
+      justify-content:space-evenly;
     }
 
     .card {
       background-color: #0b0b0c;
       border-radius: 12px;
       padding: 1.6rem;
-      width: 22rem;
-      min-height: 27rem;
+      width: 25rem;
+      min-height: 26rem;
       border: 1px solid #333;
       position: relative;
       display: flex;
@@ -376,6 +398,59 @@ body {
       color:#00eaff;
       border: 1px solid #00eaff;
     }
+    
+    .aboutme-section h2{
+      margin-bottom: 2rem;
+      font-size: 3rem;
+    }
+    .aboutme-section h2 span{
+      background-image: linear-gradient(to right,rgb(0, 188, 188), cyan);
+      color: transparent;
+      background-clip: text;
+    }
+
+    .aboutme-section ul li{
+      list-style: none;
+    }
+
+    .aboutme-section .aboutme{
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .aboutme-section p{
+      width: 56vw;
+    }
+
+    .aboutme li {
+      display: flex;
+      gap: 0.3rem;
+      align-items: center;
+    }
+
+    .contactme-section{
+      margin-top: 4rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .contactme-section h2{
+      margin-bottom: 2rem;
+      font-size: 3rem;
+    }
+    .contactme-section h2 span{
+      background-image: linear-gradient(to right,rgb(0, 188, 188), cyan);
+      color: transparent;
+      background-clip: text;
+    }
+
+
+    
+
+    
+
+    
 
     @media screen and (max-width: 768px) {
       .skill{
@@ -391,7 +466,8 @@ body {
         align-items: center;
       }
       .profile-div{
-        padding-top: 2rem;
+        top: 0rem;
+        margin-bottom:2rem ;
       }
       .main{
         flex-direction: column;
@@ -412,18 +488,44 @@ body {
       }
       .main i#three{
         top: 70vh;
-        left: 10vw;
+        left: -10vw;
         font-size: 4rem;
       }
       .main i#four{
         top: 70vh;
-        left: 60vw;
+        left: 45vw;
         scale:0.5;
       }
+      .card{
+        width: 60vw;
+      }
+      .aboutme-section h2{
+      margin-bottom: 2rem;
+      font-size: 2rem;
+    }
+
+    .aboutme-section{
+      font-size: 0.8rem;
+    }
+    .aboutme-section p{
+      width: 65vw;
+    }
+
+    .contactme-section h2{
+      margin-bottom: 2rem;
+      font-size: 2rem;
+    }
+
+    .contactme-section{
+      font-size: 0.8rem;
+    }
       
     }
 
     @media screen and (max-width: 450px) {
+      section{
+        width: 90vw;
+      }
       .main h1{
         font-size: 4rem;
       }
@@ -433,12 +535,12 @@ body {
       }
 
       .skill{
-        width: 5rem;
-        height: 3rem;
+        width: 8rem;
+        height: 4rem;
         gap: 6px;
       }
       svg{
-      width: 2rem;
+      width: 3rem;
       height: 2rem;
     }
     svg path{
@@ -455,7 +557,8 @@ body {
       font-size: 0.6rem;
     }
       .card{
-        width: 70vw;
+        width: 75vw;
+        min-height: auto;
       }
       .card h2 {
         font-size: 1rem;
@@ -469,10 +572,33 @@ body {
       .tech{
         font-size: 0.7rem;
       }
+      .card .buttons{
+        flex-direction: column;
+      }
+
       .card .buttons a{
         font-size: 0.7rem;
         padding: 5px 10px;
 
       }
+      .aboutme-section h2{
+      margin-bottom: 2rem;
+      font-size: 1.4rem;
+    }
+
+    .aboutme-section{
+      font-size: 0.5rem;
+    }
+
+    .contactme-section h2{
+      margin-bottom: 2rem;
+      font-size: 1.4rem;
+    }
+
+    .contactme-section{
+      font-size: 0.5rem;
+    }
+
+    
     }
 
