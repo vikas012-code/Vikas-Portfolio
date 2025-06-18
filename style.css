@@ -19,7 +19,7 @@
 
 @keyframes animatedBackground {  
   100%{
-        background-position: 20% 20%;
+        background-position: 40% 20%;
   }
 }
 
@@ -67,7 +67,6 @@ body {
       background-clip: text;
       margin-top: 0.5rem;
       text-align: left;
-
     }
 
     .main i{
