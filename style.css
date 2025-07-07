@@ -357,6 +357,17 @@ body {
       display: inline-block;
       margin-right: 12px;
       color: #ccc;
+      
+    }
+
+    
+    .tech
+    svg
+    {
+      scale: 0.6;
+      width: 2rem;
+      position: relative;
+      top: 13px;
     }
 
     .card .buttons {
