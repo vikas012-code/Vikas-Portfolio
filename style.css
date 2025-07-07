@@ -365,9 +365,10 @@ body {
     svg
     {
       scale: 0.6;
-      width: 2rem;
+      width: 2.2rem;
       position: relative;
-      top: 13px;
+      top: 10px;
+      left: 5px;
     }
 
     .card .buttons {
