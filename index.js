@@ -5,7 +5,7 @@ const animatedElements = document.querySelectorAll('.skills, .card , .container,
       if (entry.isIntersecting) {
         entry.target.classList.add('show');
       } else {
-        entry.target.classList.remove('show'); // Remove on scroll up
+        entry.target.classList.remove('show');
       }
     });
   }, { threshold: 0.1 });
